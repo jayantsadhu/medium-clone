@@ -13,6 +13,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
     implementation(libs.moshi)
+    implementation(libs.kotlinx.coroutines.core)
     ksp(libs.moshi.ksp)
     testImplementation(libs.junit)
 }

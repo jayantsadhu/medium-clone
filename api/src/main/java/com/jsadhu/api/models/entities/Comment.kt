@@ -1,4 +1,4 @@
-package com.jsadhu.api.models
+package com.jsadhu.api.models.entities
 
 
 import com.squareup.moshi.Json

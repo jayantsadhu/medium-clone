@@ -1,6 +1,7 @@
-package com.jsadhu.api.models
+package com.jsadhu.api.models.responses
 
 
+import com.jsadhu.api.models.entities.Comment
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
