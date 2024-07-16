@@ -10,7 +10,7 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 dependencies {
-    implementation(libs.retrofit)
+    api(libs.retrofit)
     implementation(libs.converter.moshi)
     implementation(libs.moshi)
     implementation(libs.kotlinx.coroutines.core)
