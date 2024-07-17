@@ -13,9 +13,12 @@ import kotlinx.coroutines.launch
 class GlobalFeedViewModel : ViewModel() {
 
     private var _articlesResponse =  MutableLiveData<ArticlesResponse>()
-    val articlesResponse : LiveData<ArticlesResponse> = _articlesResponse
+    val articlesResponse : LiveData<ArticlesResponse> get() = _articlesResponse
+    private var _isLoading  = MutableLiveData<Boolean>(false)
+    val isLoading : LiveData<Boolean> get() = _isLoading
 
     fun fetchArticleResponse(){
+        _isLoading.postValue(true)
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val conduitClient = ConduitClient()
@@ -24,6 +27,9 @@ class GlobalFeedViewModel : ViewModel() {
             }
             catch (e : Exception){
                 Log.d("TAG", e.message.toString())
+            }
+            finally {
+                _isLoading.postValue(false)
             }
         }
 

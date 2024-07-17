@@ -12,4 +12,9 @@
     <color name="conduit_green_dark">#266126</color>
     <color name="conduit_grey">#687077</color>
     <color name="conduit_grey_dark">#4A535A</color>
+
+    <!-- Night Mode Colors -->
+    <color name="color_primary_night">#212121</color> <!-- Dark gray -->
+    <color name="color_primary_dark_night">#000000</color> <!-- Black -->
+    <color name="color_accent_night">#FF4081</color> <!-- Accent color in night mode -->
 </resources>
