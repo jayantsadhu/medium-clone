@@ -26,7 +26,8 @@ class FeedRVAdapter : RecyclerView.Adapter<FeedRVAdapter.FeedViewHolder>() {
     override fun onBindViewHolder(holder: FeedRVAdapter.FeedViewHolder, position: Int) {
         holder.articleTitle.text = articles[position].title.substring(0, 30)
         holder.articleContent.text = articles[position].body.substring(0, 300)
-        holder.articleAuthor.text = "Author: ${articles[position].author.username}"
+        holder.articleAuthor.text = articles[position].author.username
+        holder.createdAt.text = articles[position].createdAt.substring(0, 10)
     }
 
     override fun getItemCount(): Int {
@@ -34,8 +35,9 @@ class FeedRVAdapter : RecyclerView.Adapter<FeedRVAdapter.FeedViewHolder>() {
     }
 
     class FeedViewHolder(itemView: View) : ViewHolder(itemView) {
-        val articleTitle = itemView.findViewById<TextView>(R.id.tv_title)
-        val articleContent = itemView.findViewById<TextView>(R.id.tv_content)
-        val articleAuthor = itemView.findViewById<TextView>(R.id.tv_author)
+        val articleTitle = itemView.findViewById<TextView>(R.id.tv_article_title)
+        val articleContent = itemView.findViewById<TextView>(R.id.tv_article_content)
+        val articleAuthor = itemView.findViewById<TextView>(R.id.tv_author_name)
+        val createdAt = itemView.findViewById<TextView>(R.id.tv_created_date)
     }
 }
