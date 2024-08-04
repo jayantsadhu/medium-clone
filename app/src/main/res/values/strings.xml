@@ -9,6 +9,6 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_global_feed">Feed</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_auth">Login/Signup</string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>
